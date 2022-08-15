@@ -2,8 +2,8 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    Products: null,
-    Product: null,
+    products: null,
+    product: null,
   },
   getters: {},
 
@@ -17,16 +17,16 @@ export default createStore({
   },
   actions: {
     getproducts: async (context) => {
-      fetch("https://node-pair.herokuapp.com/products")
+      fetch("https://bg-footwear.herokuapp.com/products")
         .then((res) => res.json())
         .then((products) => context.commit("setproducts", products));
     },
   },
-
-  getProduct: async (context, id) => {
-    fetch("https://node-pair.herokuapp.com/products/" + id)
+  getproduct: async (context, id) => {
+    fetch("https://bg-footwear.herokuapp.com/products/" + id)
       .then((res) => res.json())
-      .then((Product) => context.commit("setProduct", Product));
+      .then((product) => context.commit("setproduct", product));
+    console.log(res);
   },
   deleteProduct: async (context, id) => {
     fetch("https://node-pair.herokuapp.com/products/" + id, {

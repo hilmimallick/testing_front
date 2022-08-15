@@ -1,24 +1,41 @@
 <template>
-    <div class="col-md-3">
-    <router-link class="router-text" :to="{ name: 'oneCard', params: { id: product.id } }">
-      <div class="card m-3" style="width: 18rem">
-        <img v-bind:src="product.imgURL" class="img-fluid" />
-        <div class="card-body">
-          <p class="card-text-event">{{ product.title }}</p>
-          <p class="card-text-event">{{ product.category }}</p>
-          <p class="card-text-event">R{{ product.price }}</p>
-          <p class="card-text-event">{{ product.description }}</p>
-          <p class="card-text-event">{{ product.gender }}</p>
-        </div>
+  <div class="col-md-3">
+    <div class="card m-3" style="width: 18rem" id="whole-card">
+      <img :src="product.imgURL" class="img-fluid" id="product-img" />
+      <div class="card-body">
+        <router-link
+          :to="{ name: 'oneCard', params: { id: product.product_id } }"
+        >
+          <button class="product-btn">View Product</button>
+        </router-link>
       </div>
-    </router-link>
+    </div>
   </div>
 </template>
 <script>
- export default {
-        props: ["product"],
-    };
+export default {
+  props: ["product"],
+};
 </script>
 <style>
-    
+#product-img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 5px;
+}
+
+.product-btn {
+  background: transparent;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.img-fluid:hover {
+  transform: scale(1.1);
+}
+
+#whole-card {
+  background: transparent;
+  border: none;
+}
 </style>

@@ -1,10 +1,12 @@
 <template>
-  <div class="row">
-    <ProductsCard
-      v-for="product in filteredProducts"
-      :key="product.id"
-      :product="product"
-    />
+  <div class="product-body">
+    <div class="row">
+      <ProductsCard
+        v-for="product in products"
+        :key="product.id"
+        :product="product"
+      ></ProductsCard>
+    </div>
   </div>
 </template>
 <script>
@@ -24,10 +26,17 @@ export default {
         return product.Type?.toLowerCase().includes(this.search.toLowerCase());
       });
     },
+    products() {
+      return this.$store.state.products;
+    },
   },
   mounted() {
     this.$store.dispatch("getproducts");
   },
 };
 </script>
-<style></style>
+<style>
+.product-body {
+  background: linear-gradient(to right, #1a2980, #26d0ce);
+}
+</style>

@@ -1,21 +1,35 @@
 <template>
   <div class="onecard">
     <div v-if="product">
-      <div class="d-flex justify-content-center">
-        <div class="card" style="width: 30rem">
+      <div
+        v-for="item in product"
+        :key="item.product_id"
+        class="d-flex justify-content-center"
+      >
+        <div class="col-md-6">
+          <img v-bind:src="item.imgURL" class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+          <p class="card-text">{{ item.title }}</p>
+          <p class="card-text">{{ item.category }}</p>
+          <p class="card-text">R{{ item.price }}</p>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text">{{ item.gender }}</p>
+        </div>
+        <!-- <div class="card" style="width: 30rem">
           <img
-            v-bind:src="product.imgURL"
+            v-bind:src="item.imgURL"
             class="img-fluid"
             style="width: 30rem"
           />
           <div class="card-body">
-            <p class="card-text">{{ product.title }}</p>
-            <p class="card-text">{{ product.category }}</p>
-            <p class="card-text">R{{ product.price }}</p>
-            <p class="card-text">{{ product.description }}</p>
-            <p class="card-text">{{ product.gender }}</p>
+            <p class="card-text">{{ item.title }}</p>
+            <p class="card-text">{{ item.category }}</p>
+            <p class="card-text">R{{ item.price }}</p>
+            <p class="card-text">{{ item.description }}</p>
+            <p class="card-text">{{ item.gender }}</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -29,10 +43,18 @@ export default {
     };
   },
   mounted() {
-    fetch("https://node-pair.herokuapp.com/products/" + this.id)
+    fetch("https://bg-footwear.herokuapp.com/products/" + this.$route.params.id)
       .then((res) => res.json())
-      .then((data) => (this.product = data));
+      .then((data) => {
+        this.product = data;
+        console.log(product);
+      });
   },
+  // computed: {
+  //   product() {
+  //     return this.$store.state.product;
+  //   },
+  // },
 };
 </script>
 <style></style>
