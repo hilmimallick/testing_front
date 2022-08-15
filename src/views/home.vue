@@ -1,6 +1,6 @@
 <template>
-<div class="home-body">
-   <!-- image slider start -->
+  <div class="home-body">
+    <!-- image slider start -->
     <div class="slider">
       <div class="slides">
         <!-- radio buttons start -->
@@ -57,9 +57,9 @@
     </div>
     <!-- image slider end -->
     <div class="color-overlay">
-      <h1 class="home-text">Hello</h1>
+      <h1 class="home-text">Help</h1>
     </div>
-    </div>
+  </div>
 </template>
 <script>
 // let counter = 1;
@@ -71,12 +71,10 @@
 //   }
 // }, 5000);
 
-export default {
-    
-}
+export default {};
 </script>
 <style>
- .home-body {
+.home-body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -86,7 +84,7 @@ export default {
   background: linear-gradient(to right, #3d55dd, #01fcf8);
 }
 
-.home-text{
+.home-text {
   color: white;
 }
 
@@ -206,5 +204,4 @@ export default {
 #radio5:checked ~ .navigation-auto .auto-btn5 {
   background-color: #40d3dc;
 }
-
 </style>
