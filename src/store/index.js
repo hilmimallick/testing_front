@@ -1,12 +1,11 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
   state: {
     Products: null,
     Product: null,
   },
-  getters: {
-  },
+  getters: {},
 
   mutations: {
     setProducts: (state, Products) => {
@@ -17,25 +16,25 @@ export default createStore({
     },
   },
   actions: {
-    getProducts: async (context) => {
-      fetch("http://localhost:9000/products")
+    getproducts: async (context) => {
+      fetch("https://node-pair.herokuapp.com/products")
         .then((res) => res.json())
-        .then((Products) => context.commit("setProducts", Products));
+        .then((products) => context.commit("setproducts", products));
     },
   },
 
   getProduct: async (context, id) => {
-    fetch("http://localhost:9000/products/" + id)
+    fetch("https://node-pair.herokuapp.com/products/" + id)
       .then((res) => res.json())
       .then((Product) => context.commit("setProduct", Product));
   },
   deleteProduct: async (context, id) => {
-    fetch("http://localhost:9000/products/" + id, {
+    fetch("https://node-pair.herokuapp.com/products/" + id, {
       method: "DELETE",
     }).then(() => context.dispatch("getProducts"));
   },
   createProduct: async (context, Product) => {
-    fetch("http://localhost:9000/products/", {
+    fetch("https://node-pair.herokuapp.com/products/", {
       method: "POST",
       body: JSON.stringify(Product),
       headers: {
@@ -46,7 +45,7 @@ export default createStore({
       .then(() => context.dispatch("getProducts"));
   },
   updateProduct: async (context, Product) => {
-    fetch("http://localhost:9000/products/" + Product.id, {
+    fetch("https://node-pair.herokuapp.com/products/" + Product.id, {
       method: "PUT",
       body: JSON.stringify(Product),
       headers: {
@@ -57,7 +56,5 @@ export default createStore({
       .then(() => context.dispatch("getProducts"));
   },
 
-
-  modules: {
-  }
-})
+  modules: {},
+});

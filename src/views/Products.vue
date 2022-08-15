@@ -1,5 +1,5 @@
 <template>
-   <div class="row">
+  <div class="row">
     <ProductsCard
       v-for="product in filteredProducts"
       :key="product.id"
@@ -14,22 +14,20 @@ export default {
   data() {
     return {
       search: "",
-      Products: [],
+      products: [],
     };
   },
 
   computed: {
     filteredProducts() {
-      return this.$store.state.Products?.filter((product) => {
+      return this.$store.state.products?.filter((product) => {
         return product.Type?.toLowerCase().includes(this.search.toLowerCase());
       });
     },
   },
   mounted() {
-    this.$store.dispatch("getProducts");
+    this.$store.dispatch("getproducts");
   },
 };
 </script>
-<style>
-    
-</style>
+<style></style>
