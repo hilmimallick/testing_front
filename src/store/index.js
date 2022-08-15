@@ -8,11 +8,11 @@ export default createStore({
   getters: {},
 
   mutations: {
-    setProducts: (state, Products) => {
-      state.Products = Products;
+    setproducts: (state, products) => {
+      state.products = products;
     },
-    setEvent: (state, Product) => {
-      state.Product = Product;
+    setproduct: (state, product) => {
+      state.product = product;
     },
   },
   actions: {
