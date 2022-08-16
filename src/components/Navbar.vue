@@ -4,7 +4,7 @@
       <h1 class="cash">LACED HOVERS</h1>
       <ul v-show="!mobile" class="navigation">
         <li>
-          <router-link class="link" to="/Home">Home</router-link>
+          <router-link class="link" to="/">Home</router-link>
         </li>
         <li>
           <router-link class="link" to="/login">Login|Register</router-link>
@@ -45,7 +45,7 @@
           <h1 class="cash">LACED HOVERS</h1>
 
           <li>
-            <router-link class="link" to="/Home">Home</router-link>
+            <router-link class="link" to="/">Home</router-link>
           </li>
           <li>
             <router-link class="link" to="/login">Login|Register</router-link>
