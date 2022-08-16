@@ -10,20 +10,20 @@
   <router-view/> -->
   <div><Navbar /></div>
   <router-view />
-  <!-- <v-footer>
+  <v-footer>
     <Footer />
-  </v-footer> -->
+  </v-footer>
 </template>
 
 <script>
-// import Footer from "./components/Footer.vue";
+import Footer from "./components/Footer.vue";
 import Navbar from "./components/Navbar.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
-    // Footer,
+    Footer,
   },
 };
 </script>
