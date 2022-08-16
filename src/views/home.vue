@@ -57,19 +57,24 @@
     </div>
     <!-- image slider end -->
     <div class="color-overlay">
-      <h1 class="home-text">Help</h1>
+      <div class="home-text-1">
+        <h1 id="home-text">WELCOME TO</h1>
+      </div>
+      <div class="home-text-2">
+        <h1 id="home-text">LACED HOVERS</h1>
+      </div>
     </div>
   </div>
 </template>
 <script>
-// let counter = 1;
-// setInterval(function () {
-//   document.getElementById("radio" + counter).checked = true;
-//   counter++;
-//   if (counter > 5) {
-//     counter = 1;
-//   }
-// }, 5000);
+let counter = 1;
+setInterval(function () {
+  document.getElementById("radio" + counter).checked = true;
+  counter++;
+  if (counter > 5) {
+    counter = 1;
+  }
+}, 5000);
 
 export default {};
 </script>
@@ -84,8 +89,22 @@ export default {};
   background: linear-gradient(to right, #3d55dd, #01fcf8);
 }
 
-.home-text {
+#home-text {
+  font-size: 6em;
+  font-weight: bolder;
+}
+
+.home-text-1 {
   color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 13em;
+}
+
+.home-text-2 {
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .color-overlay {

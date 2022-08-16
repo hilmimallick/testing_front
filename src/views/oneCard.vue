@@ -6,15 +6,18 @@
         :key="item.product_id"
         class="d-flex justify-content-center"
       >
-        <div class="col-md-6">
+        <div class="col-md-6" id="one-img">
           <img v-bind:src="item.imgURL" class="img-fluid" />
         </div>
-        <div class="col-md-6">
-          <p class="card-text">{{ item.title }}</p>
-          <p class="card-text">{{ item.category }}</p>
-          <p class="card-text">R{{ item.price }}</p>
-          <p class="card-text">{{ item.description }}</p>
-          <p class="card-text">{{ item.gender }}</p>
+
+        <div id="one-text">
+          <div class="col-md-6">
+            <p class="card-text">{{ item.title }}</p>
+            <p class="card-text">{{ item.category }}</p>
+            <p class="card-text">R{{ item.price }}</p>
+            <p class="card-text">{{ item.description }}</p>
+            <p class="card-text">{{ item.gender }}</p>
+          </div>
         </div>
         <!-- <div class="card" style="width: 30rem">
           <img
@@ -57,4 +60,20 @@ export default {
   // },
 };
 </script>
-<style></style>
+<style>
+.onecard {
+  padding-top: 5em;
+}
+
+#one-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#one-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

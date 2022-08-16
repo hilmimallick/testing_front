@@ -38,5 +38,6 @@ export default {
 <style>
 .product-body {
   background: linear-gradient(to right, #1a2980, #26d0ce);
+  padding-top: 4em;
 }
 </style>

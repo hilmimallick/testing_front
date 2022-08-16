@@ -6,7 +6,9 @@
         <router-link
           :to="{ name: 'oneCard', params: { id: product.product_id } }"
         >
-          <button class="product-btn">View Product</button>
+          <div id="pro-btn">
+            <button class="product-btn">View Product</button>
+          </div>
         </router-link>
       </div>
     </div>
@@ -24,10 +26,20 @@ export default {
   border-radius: 5px;
 }
 
+#pro-btn {
+  display: flex;
+  justify-content: center;
+}
+
 .product-btn {
   background: transparent;
   border-radius: 5px;
   padding: 5px;
+}
+
+.product-btn:hover {
+  transform: scale(1.3);
+  background-color: rgb(186, 185, 185);
 }
 
 .img-fluid:hover {
