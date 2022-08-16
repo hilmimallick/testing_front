@@ -16,6 +16,11 @@
         <li>
           <router-link class="link" to="/contact">Contact</router-link>
         </li>
+        <li>
+          <router-link class="link" to="/cart"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></router-link>
+        </li>
 
         <!-- <div v-if="!User">
           <li>
@@ -42,7 +47,7 @@
       </div>
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
-          <h1 class="cash">LACED HOVERS</h1>
+          <!-- <h1 class="cash">LACED HOVERS</h1> -->
 
           <li>
             <router-link class="link" to="/">Home</router-link>
@@ -56,6 +61,11 @@
 
           <li>
             <router-link class="link" to="/contact">Contact</router-link>
+          </li>
+          <li>
+            <router-link class="link" to="/cart"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></router-link>
           </li>
           <!-- <div v-if="!User">
             <li>
@@ -209,6 +219,7 @@ icon-active {
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
+  padding-top: 20px;
 }
 
 .mobile-nav-enter-active,

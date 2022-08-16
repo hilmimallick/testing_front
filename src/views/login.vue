@@ -1,6 +1,6 @@
 <template>
-<div class="login-body">
-     <div class="section">
+  <div class="login-body">
+    <div class="section">
       <div class="container">
         <div class="row full-height justify-content-center">
           <div class="col-12 text-center align-self-center py-5">
@@ -43,7 +43,9 @@
                           />
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <a href="#" class="login-btn mt-4">submit</a>
+                        <a href="#" class="login-btn mt-4" @click="login()"
+                          >submit</a
+                        >
                         <p class="mb-0 mt-4 text-center">
                           <a href="#0" class="link">Forgot your password?</a>
                         </p>
@@ -98,15 +100,28 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 <script>
 export default {
-    
-}
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      this.$store.dispatch("login", {
+        email: this.email,
+        password: this.password,
+      });
+    },
+  },
+};
 </script>
 <style>
-  .login-body {
+.login-body {
   font-weight: 300;
   font-size: 20px;
   line-height: 1.7;
@@ -118,7 +133,7 @@ export default {
 a {
   cursor: pointer;
   transition: all 200ms linear;
-   text-decoration: none;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: none;
@@ -220,12 +235,12 @@ h6 span {
 .card-back {
   width: 100%;
   height: 100%;
-  background-color: rgba(250, 250, 250, 0.10);
+  background-color: rgba(250, 250, 250, 0.1);
   backdrop-filter: blur(1px);
   position: absolute;
   border-radius: 6px;
   border: 1px solid black;
-   box-shadow: 10px 25px 25px 10px rgba(25, 25, 25, 0.6);
+  box-shadow: 10px 25px 25px 10px rgba(25, 25, 25, 0.6);
   left: 0;
   top: 0;
   -webkit-transform-style: preserve-3d;
@@ -365,18 +380,17 @@ h6 span {
   text-align: center;
   border: none;
   background-color: rgb(210, 237, 236);
-  color:black;
+  color: black;
   box-shadow: 0 6px 12px 0 rgba(25, 25, 25, 0.8);
 }
 .login-btn:active,
 .login-btn:focus {
   background-color: rgb(210, 237, 236);
   color: black;
- box-shadow: 0 6px 12px 0 rgba(25, 25, 25, 0.8);
+  box-shadow: 0 6px 12px 0 rgba(25, 25, 25, 0.8);
 }
 .login-btn:hover {
- background-color: #26d0ce;
+  background-color: #26d0ce;
   color: white;
 }
-  
 </style>

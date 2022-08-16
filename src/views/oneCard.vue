@@ -68,13 +68,11 @@ export default {
 }
 
 #one-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-left: 10em;
 }
 
 #one-text {
-  width: 30em;
+  font-size: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;

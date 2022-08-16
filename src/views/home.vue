@@ -85,6 +85,7 @@ export default {};
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, #3d55dd, #01fcf8);
+  overflow-x: hidden;
 }
 
 #home-text {
@@ -220,5 +221,35 @@ export default {};
 
 #radio5:checked ~ .navigation-auto .auto-btn5 {
   background-color: #40d3dc;
+}
+
+@media only screen and (max-width: 810px) {
+  .slider {
+    width: 600px;
+  }
+
+  .slide img {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .slider {
+    width: 400px;
+  }
+
+  .slide img {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .slider {
+    width: 300px;
+  }
+
+  .slide img {
+    width: 300px;
+  }
 }
 </style>
