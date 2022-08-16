@@ -34,4 +34,8 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: linear-gradient(to right, #1a2980, #26d0ce);
+}
 </style>

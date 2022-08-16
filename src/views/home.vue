@@ -12,9 +12,7 @@
         <!-- radio buttons end -->
         <!-- slide images start -->
         <div class="slide first">
-          <img
-            src="https://i.postimg.cc/1tzqxm5C/Screenshot-2022-08-11-150458.png"
-          />
+          <img src="https://i.postimg.cc/Hs6WCCsz/pexels-lumn-167706.jpg" />
         </div>
 
         <div class="slide">

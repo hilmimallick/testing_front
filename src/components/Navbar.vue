@@ -7,7 +7,7 @@
           <router-link class="link" to="/">Home</router-link>
         </li>
         <li>
-          <router-link class="link" to="/login">Login|Register</router-link>
+          <router-link class="link" to="/login">Login | Register</router-link>
         </li>
         <li>
           <router-link class="link" to="/products">Products</router-link>
@@ -48,7 +48,7 @@
             <router-link class="link" to="/">Home</router-link>
           </li>
           <li>
-            <router-link class="link" to="/login">Login|Register</router-link>
+            <router-link class="link" to="/login">Login | Register</router-link>
           </li>
           <li>
             <router-link class="link" to="/products">Products</router-link>

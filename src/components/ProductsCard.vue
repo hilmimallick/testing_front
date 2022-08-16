@@ -39,7 +39,7 @@ export default {
 
 .product-btn:hover {
   transform: scale(1.3);
-  background-color: rgb(186, 185, 185);
+  background-color: rgb(255, 255, 255);
 }
 
 .img-fluid:hover {

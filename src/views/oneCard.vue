@@ -7,7 +7,7 @@
         class="d-flex justify-content-center"
       >
         <div class="col-md-6" id="one-img">
-          <img v-bind:src="item.imgURL" class="img-fluid" />
+          <img v-bind:src="item.imgURL" class="img-fluid" id="one-pic" />
         </div>
 
         <div id="one-text">
@@ -62,7 +62,9 @@ export default {
 </script>
 <style>
 .onecard {
-  padding-top: 5em;
+  padding-top: 8em;
+  background: linear-gradient(to right, #1a2980, #26d0ce);
+  height: 100vh;
 }
 
 #one-img {
@@ -72,8 +74,16 @@ export default {
 }
 
 #one-text {
+  width: 30em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#one-pic {
+  height: 30em;
+  width: 30em;
+  border-radius: 5px;
+  box-shadow: 10px 25px 25px 10px rgba(25, 25, 25, 0.6);
 }
 </style>
